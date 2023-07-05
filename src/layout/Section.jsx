@@ -2,20 +2,15 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 export default function Section(props) {
-    const { children, bg, row } = props;
+    const { children, bg, row, align } = props;
     return (
-        <Wrap bg={bg} row={row}>
+        <Wrap bg={bg} row={row} align={align}>
             <div className="inner">{children}</div>
         </Wrap>
     );
 }
 
 const Wrap = styled.div`
-    display: ${(props) => {
-        if (props.row === true) {
-            return 'flex';
-        } else return 'block';
-    }};
     height: 792px;
     background: ${(props) => {
         if (props.bg === 'bg01') {
@@ -27,8 +22,16 @@ const Wrap = styled.div`
 
     .inner {
         width: 1200px;
+        width: ${(props) => (props.align === 'right' ? '1484px' : '1200px')};
         margin: 0 auto;
+        margin: ${(props) => (props.align === 'right' ? '0 0 auto 0' : '0 auto')};
+
         padding: 120px 0;
+        display: ${(props) => {
+            if (props.row === true) {
+                return 'flex';
+            } else return 'block';
+        }};
     }
     .left {
         max-width: 380px;

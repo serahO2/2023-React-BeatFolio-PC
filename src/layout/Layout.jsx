@@ -9,4 +9,5 @@ const LayoutBox = styled.div`
     /* min-width: 1920px; */
     width: 100%;
     background: #000;
+    overflow-x: hidden;
 `;

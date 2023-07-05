@@ -2,11 +2,15 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 export default function TitleBox(props) {
-    const { col, icon, children } = props;
+    const { col, icon, children, subtitleBtn, rightBtn } = props;
     return (
-        <TitleWrap sty={col} icon={icon}>
+        <TitleWrap sty={col} icon={icon} subtitleBtn={subtitleBtn} rightBtn={rightBtn}>
             <Icon icon={icon}></Icon>
-            <Title>{children}</Title>
+            <Title>
+                <div>{children}</div>
+                {rightBtn && <SubTitle type="button">{rightBtn}</SubTitle>}
+            </Title>
+            {subtitleBtn && <SubTitle type="button">{subtitleBtn}</SubTitle>}
         </TitleWrap>
     );
 }
@@ -34,7 +38,20 @@ const Icon = styled.div`
     }};
 `;
 const Title = styled.div`
+    display: flex;
+    justify-content: space-between;
     font-size: 32px;
     color: #fff;
     font-weight: 600;
+
+    > button {
+        margin-left: auto;
+        margin-top: 0;
+    }
+`;
+const SubTitle = styled.button`
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 16px;
+    line-height: 30px;
 `;
