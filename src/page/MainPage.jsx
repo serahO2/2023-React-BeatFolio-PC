@@ -97,7 +97,7 @@ export const MainPage = () => {
                 <Section bg="bg03" align="unset">
                     <InfoLgSlide />
                 </Section>
-                <RollingBottom />
+                {/* <RollingBottom /> */}
             </Layout>
         </div>
     );
