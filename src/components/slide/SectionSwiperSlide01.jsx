@@ -16,12 +16,11 @@ import UserInfo from '../contents/UserInfo';
 
 export default function SectionSwiperSlide01(mrg) {
     return (
-        <Wrapper className="BannerSlide-01" mrg={mrg}>
+        <Wrapper className="SectionSwiperSlide-01" mrg={mrg}>
             <SlideWrap
                 slidesPerView="auto"
-                // loop={true}
                 spaceBetween={30}
-                className="mySwiper"
+                className="mySwiper03"
                 navigation={true}
                 modules={[Navigation]}
                 pagination={{
@@ -29,7 +28,6 @@ export default function SectionSwiperSlide01(mrg) {
                     clickable: true,
                 }}
                 loopPreventsSliding={true}
-                // loopAdditionalSlides={100}
                 loopAdditionalSlides={1}
             >
                 <SlideItem>
@@ -198,10 +196,6 @@ const Wrapper = styled.div`
     .swiper-backface-hidden .swiper-slide {
         backface-visibility: visible;
         flex-shrink: unset;
-    }
-    .swiper-slide-prev + .swiper-slide-active {
-        /* display: none;
-        opacity: 0 !important; */
     }
 
     .swiper-button-prev {

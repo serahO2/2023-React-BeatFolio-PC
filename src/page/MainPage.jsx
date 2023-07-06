@@ -13,6 +13,12 @@ import BannerSlide from '../components/slide/BannerSlide';
 import ExplainBox from '../components/list/ExplainBox';
 import SectionStarBg from '../layout/SectionStarBg';
 import TitleBox from '../components/contents/TitleBox';
+import WinnerCard from '../components/Card/WinnerCard';
+import UserCardItem from '../components/Card/UserCardItem';
+import UserCardList from '../components/list/UserCardList';
+import UserCardListEx from '../components/list/UserCardListEx';
+import InfoLgSlide from '../components/slide/InfoLgSlide';
+import RollingBottom from '../layout/RollingBottom';
 
 export const MainPage = () => {
     return (
@@ -61,9 +67,37 @@ export const MainPage = () => {
                 </Section>
                 <SectionStarBg>
                     <TitleBox icon="icon7" rightBtn="전체보기">
-                        추천 경기
+                        우승을 축하합니다!
                     </TitleBox>
+                    <Wrap mrg="40px 0 0 0 ">
+                        <WinnerCard
+                            color="white"
+                            tit="신규 브랜드 로고 콘테스트"
+                            subtit="우아한형제들"
+                            view="1.3K"
+                            like="1.3K"
+                            userImg="../img/temp/winner-user.png"
+                            userCardImg="../img/temp/winner-card.png"
+                        />
+                        <Wrap mrg="60px 0 0 0 ">
+                            <UserCardList />
+                        </Wrap>
+                    </Wrap>
                 </SectionStarBg>
+                <Section bg="bg02">
+                    <Wrap mrg="53px 0 0 0 ">
+                        <TitleBox icon="icon2" subtitleBtn="20위 보기" rightTxt="2023.4.1 ~ 2023.4.15">
+                            비트위너 순위
+                        </TitleBox>
+                        <Wrap mrg="40px 0 0 0 ">
+                            <UserCardListEx />
+                        </Wrap>
+                    </Wrap>
+                </Section>
+                <Section bg="bg03" align="unset">
+                    <InfoLgSlide />
+                </Section>
+                <RollingBottom />
             </Layout>
         </div>
     );

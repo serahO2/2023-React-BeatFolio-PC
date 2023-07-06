@@ -31,5 +31,11 @@ const Bg = styled.div`
     left: 0;
     width: 100%;
     height: 1073px;
-    background-image: linear-gradient(to bottom, #0d141c 10%, #0a0d13 30%, rgba(9, 13, 19, 0) 93%);
+    background-image: linear-gradient(
+        to bottom,
+        #0d141c 10%,
+        #0a0d13 30%,
+        rgba(13, 20, 28, 0) 50%,
+        rgba(13, 20, 28, 1) 93%
+    );
 `;

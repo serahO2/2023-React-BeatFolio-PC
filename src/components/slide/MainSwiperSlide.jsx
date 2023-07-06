@@ -16,12 +16,13 @@ export default function BannerSlide01({ mrg }) {
     return (
         <Wrapper className="BannerSlide-01" mrg={mrg}>
             <SlideWrap
+                slidesPerView="auto"
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper02"
             >
                 <SlideItem>
                     <MainSlideImg>
@@ -48,12 +49,18 @@ export default function BannerSlide01({ mrg }) {
     );
 }
 
-const SlideWrap = styled(Swiper)``;
-const SlideItem = styled(SwiperSlide)``;
+const SlideWrap = styled(Swiper)`
+    width: 784px;
+`;
+const SlideItem = styled(SwiperSlide)`
+    /* width: 784px; */
+`;
 const MainSlideImg = styled.div`
     width: 784px;
     height: 447px;
     border-radius: 20px;
+    background-color: #fff;
+
     img {
         width: 100%;
         height: auto;

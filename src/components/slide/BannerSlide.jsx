@@ -21,7 +21,7 @@ export default function BannerSlide({ mrg }) {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper01"
             >
                 <SlideItem>
                     <MainSlideImg>
@@ -50,7 +50,6 @@ const SlideWrap = styled(Swiper)``;
 const SlideItem = styled(SwiperSlide)``;
 const MainSlideImg = styled.div`
     position: relative;
-
     width: 958px;
     height: 378px;
     border-radius: 20px;

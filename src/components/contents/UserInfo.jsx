@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled } from 'styled-components';
+import CountBox from './CountBox';
 
 export default function UserInfo(props) {
     const { img, title, name, like, view } = props;
@@ -14,16 +15,7 @@ export default function UserInfo(props) {
             <RightWrap>
                 <Title className="title">{title}</Title>
                 <Name className="name">{name}</Name>
-                <CountBox className="count">
-                    <div className="like-box">
-                        <span className="like-img"></span>
-                        <span className="like-count">{like}</span>
-                    </div>
-                    <div className="view-box">
-                        <span className="view-img"></span>
-                        <span className="view-count">{view}</span>
-                    </div>
-                </CountBox>
+                <CountBox className="count" view={view} like={like}></CountBox>
             </RightWrap>
         </Wrapper>
     );
@@ -40,6 +32,7 @@ const UserImg = styled.div`
     border: 2px solid #87b6ff;
     border-radius: 50%;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    overflow: hidden;
     img {
         width: 100%;
         height: auto;
@@ -64,41 +57,41 @@ const Name = styled.div`
     line-height: 18px;
     color: #9198a5;
 `;
-const CountBox = styled.div`
-    display: flex;
-    align-items: center;
-    color: #9198a5;
+// const CountBox = styled.div`
+//     display: flex;
+//     align-items: center;
+//     color: #9198a5;
 
-    .like-box {
-        display: flex;
-        align-items: center;
-        .like-img {
-            display: block;
-            width: 18px;
-            height: 18px;
-            background: url('../img/icon/icon-like.png') no-repeat center / cover;
-            & + .like-count {
-                margin-left: 4px;
-            }
-        }
+//     .like-box {
+//         display: flex;
+//         align-items: center;
+//         .like-img {
+//             display: block;
+//             width: 18px;
+//             height: 18px;
+//             background: url('../img/icon/icon-like.png') no-repeat center / cover;
+//             & + .like-count {
+//                 margin-left: 4px;
+//             }
+//         }
 
-        & + .view-box {
-            margin-left: 12px;
-        }
-    }
+//         & + .view-box {
+//             margin-left: 12px;
+//         }
+//     }
 
-    .view-box {
-        display: flex;
-        align-items: center;
-        .view-img {
-            display: block;
-            width: 18px;
-            height: 18px;
-            background: url('../img/icon/icon-view.png') no-repeat center / cover;
+//     .view-box {
+//         display: flex;
+//         align-items: center;
+//         .view-img {
+//             display: block;
+//             width: 18px;
+//             height: 18px;
+//             background: url('../img/icon/icon-view.png') no-repeat center / cover;
 
-            & + .view-count {
-                margin-left: 4px;
-            }
-        }
-    }
-`;
+//             & + .view-count {
+//                 margin-left: 4px;
+//             }
+//         }
+//     }
+// `;
