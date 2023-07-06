@@ -1,8 +1,7 @@
 import React from 'react';
 import { styled } from 'styled-components';
 
-export default function ExplainBox(props) {
-    const { children, icon } = props;
+export default function ExplainBox() {
     return (
         <BoxWrapper>
             <Wrapper icon="icon1" className="ex-box">
