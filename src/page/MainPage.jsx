@@ -95,6 +95,12 @@ export const MainPage = () => {
                 <Section bg="bg03" align="unset">
                     <InfoLgSlide />
                 </Section>
+                <Section bg="bg02">
+                    <Wrap mrg="53px 0 0 0 ">포트폴리오 스타디움 비트위너</Wrap>
+                </Section>
+                <Section bg="bg03" align="unset">
+                    <InfoLgSlide />
+                </Section>
                 <RollingBottom />
             </Layout>
         </div>
