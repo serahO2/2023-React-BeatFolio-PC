@@ -2,15 +2,15 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 export default function TitleBox02(props) {
-    const { col, icon, children, subtitleBtn, rightBtn } = props;
+    const { col, icon, children, subtitlebtn, rightbtn } = props;
     return (
-        <TitleWrap sty={col} icon={icon} subtitleBtn={subtitleBtn} rightBtn={rightBtn}>
+        <TitleWrap sty={col} icon={icon} subtitlebtn={subtitlebtn} rightbtn={rightbtn}>
             <Icon icon={icon}></Icon>
             <Title>
                 <div>{children}</div>
-                {rightBtn && <SubTitle type="button">{rightBtn}</SubTitle>}
+                {rightbtn && <SubTitle type="button">{rightbtn}</SubTitle>}
             </Title>
-            {subtitleBtn && <SubTitle type="button">{subtitleBtn}</SubTitle>}
+            {subtitlebtn && <SubTitle type="button">{subtitlebtn}</SubTitle>}
         </TitleWrap>
     );
 }
@@ -47,8 +47,8 @@ const Title = styled.div`
     font-size: 32px;
     color: #fff;
     font-weight: 600;
-    /* display: ${(props) => (props.rightBtn === true ? 'flex' : 'block')};
-    justify-content: ${(props) => (props.rightBtn === true ? 'space-between' : 'none')}; */
+    /* display: ${(props) => (props.rightbtn === true ? 'flex' : 'block')};
+    justify-content: ${(props) => (props.rightbtn === true ? 'space-between' : 'none')}; */
 `;
 
 const SubTitle = styled.button`

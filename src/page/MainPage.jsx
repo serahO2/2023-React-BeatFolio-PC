@@ -29,7 +29,7 @@ export const MainPage = () => {
                         <BannerSlide />
                     </Wrap>
                 </MainSlideArea>
-                <Section bg="bg01" row={true}>
+                <Section bg="bg01" row="true">
                     <div className="left">
                         <TitleBox02 icon="icon1">
                             포트폴리오
@@ -45,7 +45,7 @@ export const MainPage = () => {
                     </div>
                 </Section>
                 <Section bg="bg02">
-                    <TitleBox02 icon="icon2" subtitleBtn="전체보기">
+                    <TitleBox02 icon="icon2" subtitlebtn="전체보기">
                         추천 포트폴리오
                     </TitleBox02>
                     <Wrap mrg="40px 0 0 0 ">
@@ -53,7 +53,7 @@ export const MainPage = () => {
                     </Wrap>
                 </Section>
                 <Section bg="bg02">
-                    <TitleBox02 icon="icon3" subtitleBtn="전체보기">
+                    <TitleBox02 icon="icon3" subtitlebtn="전체보기">
                         추천 경기
                     </TitleBox02>
                     <Wrap mrg="40px 0 0 0 ">
@@ -64,7 +64,7 @@ export const MainPage = () => {
                     <ExplainBox icon="icon3" />
                 </Section>
                 <SectionStarBg>
-                    <TitleBox icon="icon7" rightBtn="전체보기">
+                    <TitleBox icon="icon7" rightbtn="전체보기">
                         우승을 축하합니다!
                     </TitleBox>
                     <Wrap mrg="40px 0 0 0 ">
@@ -84,7 +84,7 @@ export const MainPage = () => {
                 </SectionStarBg>
                 <Section bg="bg02">
                     <Wrap mrg="53px 0 0 0 ">
-                        <TitleBox icon="icon2" subtitleBtn="20위 보기" rightTxt="2023.4.1 ~ 2023.4.15">
+                        <TitleBox icon="icon2" subtitlebtn="20위 보기" rightTxt="2023.4.1 ~ 2023.4.15">
                             비트위너 순위
                         </TitleBox>
                         <Wrap mrg="40px 0 0 0 ">
@@ -96,7 +96,7 @@ export const MainPage = () => {
                     <InfoLgSlide />
                 </Section>
                 <Section bg="bg02">
-                    <Wrap mrg="53px 0 0 0 ">포트폴리오 스타디움 비트위너</Wrap>
+                    <Wrap mrg="53px 0 0 0 "></Wrap>
                 </Section>
                 <Section bg="bg03" align="unset">
                     <InfoLgSlide />

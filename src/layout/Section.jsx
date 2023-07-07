@@ -38,7 +38,7 @@ const Wrap = styled.div`
 
         padding: 120px 0;
         display: ${(props) => {
-            if (props.row === true) {
+            if (props.row === 'true') {
                 return 'flex';
             } else return 'block';
         }};

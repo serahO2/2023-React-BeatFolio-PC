@@ -2,16 +2,16 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 export default function TitleBox(props) {
-    const { col, icon, children, subtitleBtn, rightBtn, rightTxt } = props;
+    const { col, icon, children, subtitlebtn, rightbtn, rightTxt } = props;
     return (
-        <TitleWrap sty={col} icon={icon} subtitleBtn={subtitleBtn} rightBtn={rightBtn}>
+        <TitleWrap sty={col} icon={icon} subtitlebtn={subtitlebtn} rightbtn={rightbtn}>
             <Icon icon={icon}></Icon>
             <Title>
                 <div>{children}</div>
-                {rightBtn && <SubTitle type="button">{rightBtn}</SubTitle>}
+                {rightbtn && <SubTitle type="button">{rightbtn}</SubTitle>}
             </Title>
             <SubBox>
-                {subtitleBtn && <SubTitle type="button">{subtitleBtn}</SubTitle>}
+                {subtitlebtn && <SubTitle type="button">{subtitlebtn}</SubTitle>}
                 {rightTxt && (
                     <RightTxt>
                         집계기간<span>{rightTxt}</span>

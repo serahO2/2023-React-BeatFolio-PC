@@ -28,7 +28,6 @@ export default function SectionSwiperSlide01(mrg) {
                     clickable: true,
                 }}
                 loopPreventsSliding={true}
-                loopAdditionalSlides={1}
             >
                 <SlideItem>
                     <MainSlideImg>
