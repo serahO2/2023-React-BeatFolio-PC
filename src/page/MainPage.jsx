@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../layout/Layout';
 import Header from '../layout/Header';
 import { styled } from 'styled-components';
@@ -17,8 +17,22 @@ import UserCardList from '../components/list/UserCardList';
 import UserCardListEx from '../components/list/UserCardListEx';
 import InfoLgSlide from '../components/slide/InfoLgSlide';
 import RollingBottom from '../layout/RollingBottom';
+import { ActingCardList } from '../components/Card/ActingCard';
+import MainMoreBtn from '../components/button/MainMoreBtn';
+import { BoardItemList } from '../components/contents/BoardItem';
+import { QnAList } from '../components/contents/QnAItem';
+import Footer from '../layout/Footer';
+import ParallaxTextBox, { ParallaxText } from '../layout/RollingBot';
 
 export const MainPage = () => {
+    const rightRef = useRef(null);
+
+    const handleTouchMove = (e) => {
+        if (rightRef.current) {
+            rightRef.current.scrollLeft -= e.touches[0].clientX - e.touches[0].clientX;
+        }
+    };
+
     return (
         <div>
             <Layout>
@@ -30,7 +44,7 @@ export const MainPage = () => {
                     </Wrap>
                 </MainSlideArea>
                 <Section bg="bg01" row="true">
-                    <div className="left">
+                    <div className="fix-left">
                         <TitleBox02 icon="icon1">
                             포트폴리오
                             <br />
@@ -40,7 +54,7 @@ export const MainPage = () => {
                             <TagList />
                         </Wrap>
                     </div>
-                    <div className="right">
+                    <div className="fix-right">
                         <BannerSlide01 mrg="57px" />
                     </div>
                 </Section>
@@ -95,13 +109,38 @@ export const MainPage = () => {
                 <Section bg="bg03" align="unset">
                     <InfoLgSlide />
                 </Section>
-                <Section bg="bg02">
-                    <Wrap mrg="53px 0 0 0 "></Wrap>
+                <Section bg="bg04">
+                    <ActingCardList />
                 </Section>
-                <Section bg="bg03" align="unset">
-                    <InfoLgSlide />
+
+                <Section bg="bg05" row="true">
+                    <div className="left">
+                        <TitleBox02 icon="icon4">공지사항</TitleBox02>
+                        <Wrap mrg="30px 0 0 0 ">
+                            <MainMoreBtn />
+                        </Wrap>
+                    </div>
+                    <div className="">
+                        <Wrap mrg="95px 0 0 73px ">
+                            <BoardItemList />
+                        </Wrap>
+                    </div>
                 </Section>
-                <RollingBottom />
+                <Section bg="bg03" row="true" align="right02">
+                    <div className="left">
+                        <TitleBox02 icon="icon6">FAQ</TitleBox02>
+
+                        <Wrap mrg="30px 0 0 0 ">
+                            <MainMoreBtn />
+                        </Wrap>
+                    </div>
+                    <div className="right" ref={rightRef} onTouchMove={handleTouchMove}>
+                        <QnAList />
+                    </div>
+                </Section>
+                <Footer></Footer>
+                {/* <RollingBottom /> */}
+                <ParallaxTextBox />
             </Layout>
         </div>
     );

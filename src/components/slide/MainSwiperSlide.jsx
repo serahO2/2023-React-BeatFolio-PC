@@ -1,6 +1,6 @@
 import React from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, Autoplay } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -23,6 +23,8 @@ export default function BannerSlide01({ mrg }) {
                 }}
                 modules={[Pagination]}
                 className="mySwiper02"
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
+                loop={true}
             >
                 <SlideItem>
                     <MainSlideImg>

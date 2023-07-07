@@ -6,8 +6,7 @@ export default function Layout({ children }) {
 }
 
 const LayoutBox = styled.div`
-    /* min-width: 1920px; */
     width: 100%;
-    background: #000;
+    background: #0a0a0a;
     overflow-x: hidden;
 `;

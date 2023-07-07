@@ -12,7 +12,13 @@ html {
 
 body {
     margin: 0;
-
+    width: 100%;
+    height: 100%;
+overflow-x: hidden;
+max-width: 100vw;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 
 article,

@@ -53,17 +53,17 @@ const Wrapper = styled.div`
     border-radius: 20px;
 
     &:first-child {
-        animation: box-up-down 4s ease-in-out 0.5s infinite;
+        animation: box-up-down 4s ease-in-out 0s infinite;
     }
 
     &:nth-child(2) {
         margin-top: 122px;
-        animation: box-up-down 4s ease-in-out 1s infinite;
+        animation: box-up-down 3s ease-in-out 1s infinite;
     }
 
     &:nth-child(3) {
         margin-top: 57px;
-        animation: box-up-down 4s ease-in-out 1.5s infinite;
+        animation: box-up-down 3s ease-in-out 1.2s infinite;
     }
 
     @keyframes box-up-down {
@@ -71,7 +71,7 @@ const Wrapper = styled.div`
             transform: translateY(0px);
         }
         50% {
-            transform: translateY(-50px);
+            transform: translateY(-60px);
         }
         100% {
             transform: translateY(0px);
